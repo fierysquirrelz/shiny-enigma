@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(213, 247, 163);
+    min-height: 100vh;
+    
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*…The two above are for the overlay layer, not the image.*/
+    background-image: url(parakeet-bird.png), url(venus.png);
+    background-repeat: no-repeat;
+    background-size: 300px, 200px;
+    background-position:  left bottom, right center;
+    opacity: 0.6; /* Set transparency */
+    z-index: -1; /* Push behind all content */
+}
+
+.page {
+    text-align: left;
+    width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px; /*Rounds the corners of an element.*/
+    background-color: rgb(213, 247, 163);
+    background-size: cover;
+    border: 2px solid rgb(159, 128, 2);
+}
+
+.top-nav {
+    background-color: rgb(205, 247, 143);
+    text-align: right;
+    padding: 10px;
+    border: 2px solid rgb(159, 128, 2);
+}
+
+.top-nav a {
+    color: black;
+    background-color: rgb(254, 223, 101);
+    border: 1px solid;
+    margin: 1px;
+    padding: 3px;
+}
+
+a {
+    color: darkgreen;
+}
+
+footer {
+    background-color: rgb(205, 247, 143);
+    padding: 10px;
+    text-align: center;
+    border: solid 2px rgb(77, 177, 102);
+    margin: 0;
+}
+
+footer a {
+    color: black;
+    background-color: rgb(129, 206, 94);
+    border: 1px solid;
+    margin: 1px;
+    padding: 3px;
+    text-align: center;
+}
+

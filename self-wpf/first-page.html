@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--Tests might be more suitable for the retention of knowledge compared to reading books.-->
+<!--The <!DOCTYPE> declaration is not case sensitive.-->
+<html>
+<head>
+    <title>First</title>
+    <meta charset="UTF-8">
+    <!--I s'pose this is useful when unique characters are used, like Chinese or maybe even Russian ones.-->
+    <link rel="stylesheet" href="first-page.css ">
+    <!--link rel means 'link relationship', the relationship the linked
+    file has with the original hypertext doc-->
+    <link rel="icon" href="mew-icon.png" type="image/png">
+    <!--type refers to the 'type of image', the format. It's always preceded by 'image'-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <!--Just a font I thought looked cool; the other one I'd picked was 
+    virtually unreadable...-->
+</head>
+
+
+<body>
+    <nav class="top-nav">
+        <a href="first-page.html" target="_blank">First</a>
+        <a href="experiments.html" target="_blank">Experiments (Broken)</a>
+        <a href="#">Placeholder</a>
+     </nav>
+<div class="wrapper">
+     <nav class="left-nav">
+        <h1 style="text-decoration: underline;">Navigation</h1>
+        <a href=#section1>Purpose</a>
+     </nav>
+    <div class="page">
+    <h1 id="section1">Purpose Of This Page</h1>
+    <p>I'm experimenting with building a website manually (no bootstrap). 
+    I was inspired by <a href="https://bulbapedia.bulbagarden.net/wiki/Psychic_(type)">Bulbapaedia's website</a>, 
+    which is really pretty and aesthetic. It's not as fluid as modern websites, 
+    but it makes good use of background colours to present a page that is easy on the eyes.</p>
+    <h2>Breakdown Of Model Website</h2>
+    <p>
+        Bulbapaedia appears to have stayed relatively 'stagnant', unchanged from its early days. 
+        I believe that I first chanced upon this gem from 2000 to 2010, where moving elements 
+        had not yet become the norm. The overlying theme of this webpage is green and there's a generous use of 
+        rounded boxes to contain information. By today's standards, many 
+        portions of this website are <strong>information-dense</strong>, which is commendable, especially 
+        keeping in mind its purpose as an encyclopaedia. However, its extensive use of images can be 
+        rather inconvenient for those with low-speed internet. After all, one of the greatest boons 
+        of traditional websites is their high loading speed.
+        <br><br>
+        Now, with such high information density, one must use alternative ways to break up text into concise prose 
+        while <strong>allowing users to distinguish for themselves which they'd rather read</strong>. So if I hear someone 
+        calling the bullet-points AI-written, my forehead will soon bear an imprint of my palm.
+        <h4>Pros</h4>
+            <ol class="list">
+                <li><strong>Straightforward, linear navigation.</strong> There are visible (already expanded) 
+                    trees and nested navigation links, which provides a clear structure of information.</li>
+                <li><strong>Information-dense.</strong> All relevant information is presented 
+                    directly, without being abbreviated and shortened into soundbites.</li>
+                <li><strong>Lack of design-friction.</strong> Most of the data you could ever want to access 
+                    is available in one or two clicks rather than being buried in obscure menus.</li>
+                <li><strong>Lack of dancing elements.</strong> I may be in the minority, but 
+                    it is disorientating and confusing when elements and words flip around, spin or even 
+                    fade into nothingness when scrolling through a website. <a href="https://loops.wannathis.one/">
+                    This is a mild example.</a> It took me five seconds to load.</li>
+                </ol>
+        <h4>Cons</h4>
+            <ol class="list">
+                <li><strong>Extensive use of images.</strong> Granted, this is an encyclopaedia, so images 
+                    may be necessary for a comprehensive and informative guide on the topic at hand. As such, I 
+                    don't see this as a true downside. Some have reported that there are too many advertisements, 
+                    but I can't comment on that as I use an adblocker.</li>
+                </ol>
+        </p>
+        <!--'a href' stands for a hypertext reference.
+        It's supposed to be visible and used for navigation, 
+        unlike link rel (for stylesheets)-->
+        <a href="https://developer.mozilla.org/en-US/">What I use as a learning resource.</a>
+        <!--An HTML element is defined by a start tag, some content, and an end tag.-->
+        <br>
+        <div class="image-wrapper"> 
+            <img src="mew-icon.png" alt="mew-img">
+            <!--This is an image. alt means 'alternative text', whcih appears
+            only when the image fails to load.-->
+            <!--By using CSS to create a px limit... I can limit the size on mobile.
+            It restricts the maximum size but not the minimum size.-->
+            <p><small>The image I used for the favicon. The background had to be transparent.<br><br>
+            If any image on this website is not in the public domain and you'd like me to 
+            remove it, please use the feedback form.</small></p>
+        </div>
+    <h2>Other Stuff</h2>
+    <p>The rest of this page is just filler to make it more fleshed-out. When I see 
+        pretty websites like Bulbapaedia, it does fill me with excitement, thinking about 
+        designing them. I might be labelled a luddite for disliking many aspects of 
+        modern websites, and I do see the benefits of technological progress. An obvious 
+        example would be the speed of 5G internet!
+    </p>
+    </div>
+    <form action="/submissions" method="post">
+        <label for="text1">What can be improved about this page?</label>
+        <textarea id="text1" name="feedback" rows="4" cols="50"
+        placeholder="Type here..."></textarea>
+            <p>Did you look at the code?</p>
+            <label>
+                <input type="radio" name="look" value="yes" required>
+                Yes
+            </label>
+            <label>
+                <input type="radio" name="look" value="no">
+                No
+            </label>
+
+
+
+            <p>Rate your experience:</p>
+            <label>
+              <input type="radio" name="exp" value="good1" required>
+              Good
+            </label>
+            <label>
+                <input type="radio" name="exp" value="average1">
+                Average
+              </label>
+
+            <label>
+              <input type="radio" name="exp" value="bad1">
+              Bad
+            </label>
+
+
+            <p>Should I optimise for phones?</p>
+            <label>
+                <input type="radio" name="platform" value="yes2">
+                Yes
+            </label>
+            <label>
+                <input type="radio" name="platform" value="no2">
+                No
+            </label>
+            <label>
+                <input type="radio" name="platform" value="havetime1">
+                If you have the time
+            </label>
+
+
+            <p>What should I do with the blank space on the right?</p>
+            <textarea id="blank-space" rows="4" cols="50" placeholder="Nuke it!"></textarea>
+            <br><br>
+            <input type="submit" value="Send">
+    </form>
+</div>
+</div>
+</div>
+<footer>
+    <p>This is the footer.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Sprite Running Towards Cursor</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .sprite {
+      width: 32px;
+      height: 48px;
+      position: absolute;
+      background: url('png/cat_black-32x48.png') left center;
+      background-repeat: no-repeat;
+      animation: runCat 1s steps(6) infinite;
+    }
+
+    @keyframes runCat {
+      from { background-position: 0px 0px; }
+      to { background-position: -192px 0px; } /* 6 frames * 32px = 192px */
+    }
+  </style>
+</head>
+<body>
+  <div class="sprite" id="sprite"></div>
+
+  <script>
+    const sprite = document.getElementById('sprite');
+
+    // Set initial position to center of the screen
+    sprite.style.left = `${window.innerWidth / 2 - sprite.offsetWidth / 2}px`;
+    sprite.style.top = `${window.innerHeight / 2 - sprite.offsetHeight / 2}px`;
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+
+    // Function to move the sprite towards the cursor
+    function moveSpriteToCursor(e) {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    }
+
+    // Function to update sprite's position smoothly
+    function updateSpritePosition() {
+      const spriteRect = sprite.getBoundingClientRect();
+      const spriteX = spriteRect.left + spriteRect.width / 2;
+      const spriteY = spriteRect.top + spriteRect.height / 2;
+
+      const angle = Math.atan2(targetY - spriteY, targetX - spriteX); // Get angle of movement
+      const distance = 3; // Speed of movement per frame
+
+      // Move sprite towards the target (cursor)
+      sprite.style.transform = `rotate(${angle}rad)`; // Rotate sprite towards cursor
+
+      const newX = spriteX + Math.cos(angle) * distance - spriteRect.width / 2;
+      const newY = spriteY + Math.sin(angle) * distance - spriteRect.height / 2;
+
+      // Update position with bounds check
+      sprite.style.left = `${Math.min(Math.max(newX, 0), window.innerWidth - spriteRect.width)}px`;
+      sprite.style.top = `${Math.min(Math.max(newY, 0), window.innerHeight - spriteRect.height)}px`;
+
+      // Continue to move sprite with next frame
+      requestAnimationFrame(updateSpritePosition);
+    }
+
+    // Event listener for mousemove
+    document.addEventListener('mousemove', moveSpriteToCursor);
+
+    // Start the movement loop
+    updateSpritePosition();
+  </script>
+</body>
+</html>

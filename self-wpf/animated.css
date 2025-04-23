@@ -1,0 +1,7 @@
+.sprite {
+    width: 100px; /* width of one frame */
+    height: 100px; /* height of frame */
+    background-image: url(png/cat_black-32x48.png);
+    background-repeat: no-repeat;
+    animation: run 0.8s steps(6) infinite; /* 6 frames */
+  }

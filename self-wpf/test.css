@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f5c89c;
+    padding: 20px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px;
+}
+
+.content {
+    max-width: 500px;
+    width: 100%;
+    background-color: #f3f3d4;
+    padding: 20px;
+}
+
+.page, .sidebar, .header, .content {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: soft shadow */
+    /* background-color: white; Optional: better contrast */
+  }
